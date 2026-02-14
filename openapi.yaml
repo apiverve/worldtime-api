@@ -1,32 +1,36 @@
 openapi: 3.0.4
 info:
   title: World Time
-  description: World Time is a simple tool for getting the current time in any city. It returns the current time, date, and more.
+  description: >-
+    World Time is a simple tool for getting the current time in any city. It
+    returns the current time, date, and more.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/worldtime:
     get:
       summary: Get City Time
-      description: World Time is a simple tool for getting the current time in any city. It returns the current time, date, and more.
+      description: Get the current time in any city
       operationId: worldtime
       parameters:
-      - name: city
-        in: query
-        schema:
-          type: string
-        required: true
-        description: The city name for which you want to get the current time (e.g., New York)
-        example: San Francisco
+        - name: city
+          in: query
+          schema:
+            type: string
+          required: true
+          description: >-
+            The city name for which you want to get the current time (e.g., New
+            York)
+          example: San Francisco
       responses:
         '200':
           description: Successful Response
@@ -42,59 +46,59 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   search: San Francisco
                   foundCities:
-                  - city: San Francisco
-                    city_ascii: San Francisco
-                    country: Argentina
-                    iso2: AR
-                    iso3: ARG
-                    province: Córdoba
-                    timezone: America/Argentina/Cordoba
-                    time: 18:36
-                    time24: 18:36:10
-                    time12: 06:36:10 PM
-                    date: 2025-02-20
-                    day: Thursday
-                    month: February
-                    year: '2025'
-                    unix: '1740087370'
-                    dst: false
-                    dst_start: 2025-02-20 18:36:10
-                    dst_end: 2025-02-20 18:36:10
-                    dst_name: '-03'
-                  - city: San Francisco
-                    city_ascii: San Francisco
-                    country: United States of America
-                    iso2: US
-                    iso3: USA
-                    province: California
-                    state_ansi: CA
-                    timezone: America/Los_Angeles
-                    time: 13:36
-                    time24: 13:36:10
-                    time12: 01:36:10 PM
-                    date: 2025-02-20
-                    day: Thursday
-                    month: February
-                    year: '2025'
-                    unix: '1740087370'
-                    dst: false
-                    dst_start: 2025-02-20 13:36:10
-                    dst_end: 2025-02-20 13:36:10
-                    dst_name: PST
+                    - city: San Francisco
+                      city_ascii: San Francisco
+                      country: Argentina
+                      iso2: AR
+                      iso3: ARG
+                      province: Córdoba
+                      timezone: America/Argentina/Cordoba
+                      time: '19:33'
+                      time24: '19:33:04'
+                      time12: 07:33:04 PM
+                      date: '2025-12-16'
+                      day: Tuesday
+                      month: December
+                      year: '2025'
+                      unix: '1765924384'
+                      dst: false
+                      dst_start: '2025-12-16 19:33:04'
+                      dst_end: '2025-12-16 19:33:04'
+                      dst_name: '-03'
+                    - city: San Francisco
+                      city_ascii: San Francisco
+                      country: United States of America
+                      iso2: US
+                      iso3: USA
+                      province: California
+                      state_ansi: CA
+                      timezone: America/Los_Angeles
+                      time: '14:33'
+                      time24: '14:33:04'
+                      time12: 02:33:04 PM
+                      date: '2025-12-16'
+                      day: Tuesday
+                      month: December
+                      year: '2025'
+                      unix: '1765924384'
+                      dst: false
+                      dst_start: '2025-12-16 14:33:04'
+                      dst_end: '2025-12-16 14:33:04'
+                      dst_name: PST
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -102,4 +106,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
