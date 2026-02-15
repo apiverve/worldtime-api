@@ -12,7 +12,6 @@ namespace APIVerve.API.WorldTime
     {
         /// <summary>
         /// The city name for which you want to get the current time (e.g., New York)
-        /// Example: San Francisco
         /// </summary>
         [JsonProperty("city")]
         public string City { get; set; }
