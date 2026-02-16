@@ -261,8 +261,9 @@ from apiverve_worldtime.apiClient import WorldtimeAPIClient
 
 api = WorldtimeAPIClient("[YOUR_API_KEY]")
 
+query = { "city": "San Francisco" }
+
 try:
-    query = { "city": "San Francisco" }
     result = api.execute(query)
     print(result)
 finally:
