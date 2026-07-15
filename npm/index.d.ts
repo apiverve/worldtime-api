@@ -4,40 +4,52 @@ declare module '@apiverve/worldtime' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface worldtimeResponse {
     status: string;
     error: string | null;
     data: WorldTimeData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface WorldTimeData {
-      search:      string;
+      search:      null | string;
       foundCities: FoundCity[];
   }
   
   interface FoundCity {
-      city:       string;
-      cityASCII:  string;
-      country:    string;
-      iso2:       string;
-      iso3:       string;
-      province:   string;
-      timezone:   string;
-      time:       string;
-      time24:     string;
-      time12:     string;
-      date:       Date;
-      day:        string;
-      month:      string;
-      year:       string;
-      unix:       string;
-      dst:        boolean;
-      dstStart:   Date;
-      dstEnd:     Date;
-      dstName:    string;
-      stateANSI?: string;
+      city:       null | string;
+      cityASCII:  null | string;
+      country:    null | string;
+      iso2:       null | string;
+      iso3:       null | string;
+      province:   null | string;
+      timezone:   null | string;
+      time:       null | string;
+      time24:     null | string;
+      time12:     null | string;
+      date:       Date | null;
+      day:        null | string;
+      month:      null | string;
+      year:       null | string;
+      unix:       null | string;
+      dst:        boolean | null;
+      dstStart:   Date | null;
+      dstEnd:     Date | null;
+      dstName:    null | string;
+      stateANSI?: null | string;
   }
 
   export default class worldtimeWrapper {
