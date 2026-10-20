@@ -1,13 +1,13 @@
-# [World Time API](https://worldtime.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [World Time API](https://apiverve.com/marketplace/worldtime?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-World Time is a simple tool for getting the current time in any city. It returns the current time, date, and more.
+World Time looks up the current local time, date, and timezone for any city. Search by city name to get matching locations with country codes, IANA timezone identifiers, and formatted times in 12-hour and 24-hour formats.
 
 The World Time API provides a simple, reliable way to integrate world time functionality into your applications. Built for developers who need production-ready world time capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://worldtime.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/worldtime?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://worldtime.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/worldtime?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -161,7 +161,7 @@ go get github.com/apiverve/worldtime-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [World Time API](https://worldtime.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [World Time API](https://apiverve.com/marketplace/worldtime?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/worldtime](https://docs.apiverve.com/ref/worldtime)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -191,11 +191,73 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the World Time API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "search": "San Francisco",
+    "foundCities": [
+      {
+        "city": "San Francisco",
+        "city_ascii": "San Francisco",
+        "country": "Argentina",
+        "iso2": "AR",
+        "iso3": "ARG",
+        "province": "Córdoba",
+        "timezone": "America/Argentina/Cordoba",
+        "time": "19:33",
+        "time24": "19:33:04",
+        "time12": "07:33:04 PM",
+        "date": "2025-12-16",
+        "day": "Tuesday",
+        "month": "December",
+        "year": "2025",
+        "unix": "1765924384",
+        "dst": false,
+        "dst_start": "2025-12-16 19:33:04",
+        "dst_end": "2025-12-16 19:33:04",
+        "dst_name": "-03"
+      },
+      {
+        "city": "San Francisco",
+        "city_ascii": "San Francisco",
+        "country": "United States of America",
+        "iso2": "US",
+        "iso3": "USA",
+        "province": "California",
+        "state_ansi": "CA",
+        "timezone": "America/Los_Angeles",
+        "time": "14:33",
+        "time24": "14:33:04",
+        "time12": "02:33:04 PM",
+        "date": "2025-12-16",
+        "day": "Tuesday",
+        "month": "December",
+        "year": "2025",
+        "unix": "1765924384",
+        "dst": false,
+        "dst_start": "2025-12-16 14:33:04",
+        "dst_end": "2025-12-16 14:33:04",
+        "dst_name": "PST"
+      }
+    ]
+  }
 }
 ```
 
@@ -203,7 +265,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [World Time API](https://worldtime.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [World Time API](https://apiverve.com/marketplace/worldtime?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

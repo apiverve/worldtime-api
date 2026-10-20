@@ -2,8 +2,9 @@ openapi: 3.0.4
 info:
   title: World Time
   description: >-
-    World Time is a simple tool for getting the current time in any city. It
-    returns the current time, date, and more.
+    World Time looks up the current local time, date, and timezone for any city.
+    Search by city name to get matching locations with country codes, IANA
+    timezone identifiers, and formatted times in 12-hour and 24-hour formats.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +19,7 @@ servers:
 paths:
   /v1/worldtime:
     get:
-      summary: Get City Time
+      summary: World Time
       description: Get the current time in any city
       operationId: worldtime
       parameters:
