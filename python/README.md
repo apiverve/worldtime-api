@@ -1,13 +1,12 @@
 World Time API
 ============
 
-World Time is a simple tool for getting the current time in any city. It returns the current time, date, and more.
+World Time looks up the current local time, date, and timezone for any city. Search by city name to get matching locations with country codes, IANA timezone identifiers, and formatted times in 12-hour and 24-hour formats.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [World Time API](https://worldtime.apiverve.com?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-worldtime.svg)](https://pypi.org/project/apiverve-worldtime/)
+
+This is a Python wrapper for the [World Time API](https://apiverve.com/marketplace/worldtime?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-worldtime
 
 ## Configuration
 
-Before using the worldtime API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the World Time API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -60,7 +59,7 @@ except Exception as e:
 
 ## Usage
 
-The World Time API documentation is found here: [https://docs.apiverve.com/ref/worldtime](https://docs.apiverve.com/ref/worldtime?utm_source=pypi&utm_medium=readme).
+The World Time API documentation is found here: [https://docs.apiverve.com/ref/worldtime](https://docs.apiverve.com/ref/worldtime?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -112,17 +111,17 @@ print(result)
         "iso3": "ARG",
         "province": "Córdoba",
         "timezone": "America/Argentina/Cordoba",
-        "time": "18:36",
-        "time24": "18:36:10",
-        "time12": "06:36:10 PM",
-        "date": "2025-02-20",
-        "day": "Thursday",
-        "month": "February",
+        "time": "19:33",
+        "time24": "19:33:04",
+        "time12": "07:33:04 PM",
+        "date": "2025-12-16",
+        "day": "Tuesday",
+        "month": "December",
         "year": "2025",
-        "unix": "1740087370",
+        "unix": "1765924384",
         "dst": false,
-        "dst_start": "2025-02-20 18:36:10",
-        "dst_end": "2025-02-20 18:36:10",
+        "dst_start": "2025-12-16 19:33:04",
+        "dst_end": "2025-12-16 19:33:04",
         "dst_name": "-03"
       },
       {
@@ -134,17 +133,17 @@ print(result)
         "province": "California",
         "state_ansi": "CA",
         "timezone": "America/Los_Angeles",
-        "time": "13:36",
-        "time24": "13:36:10",
-        "time12": "01:36:10 PM",
-        "date": "2025-02-20",
-        "day": "Thursday",
-        "month": "February",
+        "time": "14:33",
+        "time24": "14:33:04",
+        "time12": "02:33:04 PM",
+        "date": "2025-12-16",
+        "day": "Tuesday",
+        "month": "December",
         "year": "2025",
-        "unix": "1740087370",
+        "unix": "1765924384",
         "dst": false,
-        "dst_start": "2025-02-20 13:36:10",
-        "dst_end": "2025-02-20 13:36:10",
+        "dst_start": "2025-12-16 14:33:04",
+        "dst_end": "2025-12-16 14:33:04",
         "dst_name": "PST"
       }
     ]
@@ -275,7 +274,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -286,12 +285,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
