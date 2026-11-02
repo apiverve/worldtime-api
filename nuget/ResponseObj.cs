@@ -98,6 +98,21 @@ namespace APIVerve.API.WorldTime
         [JsonProperty("dst_name")]
         public string DstName { get; set; }
 
+        [JsonProperty("utc_offset")]
+        public string UtcOffset { get; set; }
+
+        [JsonProperty("datetime")]
+        public DateTimeOffset? Datetime { get; set; }
+
+        [JsonProperty("utc_datetime")]
+        public DateTimeOffset? UtcDatetime { get; set; }
+
+        [JsonProperty("day_of_year")]
+        public long? DayOfYear { get; set; }
+
+        [JsonProperty("week_number")]
+        public long? WeekNumber { get; set; }
+
         [JsonProperty("state_ansi")]
         public string StateAnsi { get; set; }
     }

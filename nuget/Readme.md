@@ -1,7 +1,7 @@
 World Time API
 ============
 
-World Time looks up the current local time, date, and timezone for any city. Search by city name to get matching locations with country codes, IANA timezone identifiers, and formatted times in 12-hour and 24-hour formats.
+World Time looks up the current local time, date, and timezone for any city, or for any latitude and longitude. Search by city name to get matching locations with country codes, IANA timezone identifiers, UTC offsets, and formatted times in 12-hour, 24-hour, and ISO 8601 formats.
 
 
 [![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.WorldTime.svg)](https://www.nuget.org/packages/APIVerve.API.WorldTime)
@@ -376,18 +376,23 @@ using (var apiClient = new WorldTimeAPIClient("[YOUR_API_KEY]"))
         "iso3": "ARG",
         "province": "Córdoba",
         "timezone": "America/Argentina/Cordoba",
-        "time": "19:33",
-        "time24": "19:33:04",
-        "time12": "07:33:04 PM",
-        "date": "2025-12-16",
-        "day": "Tuesday",
-        "month": "December",
-        "year": "2025",
-        "unix": "1765924384",
+        "time": "17:51",
+        "time24": "17:51:13",
+        "time12": "05:51:13 PM",
+        "date": "2026-10-26",
+        "day": "Monday",
+        "month": "October",
+        "year": "2026",
+        "unix": "1793047873",
         "dst": false,
-        "dst_start": "2025-12-16 19:33:04",
-        "dst_end": "2025-12-16 19:33:04",
-        "dst_name": "-03"
+        "dst_start": null,
+        "dst_end": null,
+        "dst_name": "-03",
+        "utc_offset": "-03:00",
+        "datetime": "2026-10-26T17:51:13-03:00",
+        "utc_datetime": "2026-10-26T20:51:13Z",
+        "day_of_year": 299,
+        "week_number": 44
       },
       {
         "city": "San Francisco",
@@ -398,18 +403,23 @@ using (var apiClient = new WorldTimeAPIClient("[YOUR_API_KEY]"))
         "province": "California",
         "state_ansi": "CA",
         "timezone": "America/Los_Angeles",
-        "time": "14:33",
-        "time24": "14:33:04",
-        "time12": "02:33:04 PM",
-        "date": "2025-12-16",
-        "day": "Tuesday",
-        "month": "December",
-        "year": "2025",
-        "unix": "1765924384",
-        "dst": false,
-        "dst_start": "2025-12-16 14:33:04",
-        "dst_end": "2025-12-16 14:33:04",
-        "dst_name": "PST"
+        "time": "13:51",
+        "time24": "13:51:13",
+        "time12": "01:51:13 PM",
+        "date": "2026-10-26",
+        "day": "Monday",
+        "month": "October",
+        "year": "2026",
+        "unix": "1793047873",
+        "dst": true,
+        "dst_start": "2026-03-08 03:00:00",
+        "dst_end": "2026-11-01 01:00:00",
+        "dst_name": "PDT",
+        "utc_offset": "-07:00",
+        "datetime": "2026-10-26T13:51:13-07:00",
+        "utc_datetime": "2026-10-26T20:51:13Z",
+        "day_of_year": 299,
+        "week_number": 44
       }
     ]
   }
