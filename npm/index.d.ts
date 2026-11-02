@@ -30,26 +30,31 @@ declare module '@apiverve/worldtime' {
   }
   
   interface FoundCity {
-      city:       null | string;
-      cityASCII:  null | string;
-      country:    null | string;
-      iso2:       null | string;
-      iso3:       null | string;
-      province:   null | string;
-      timezone:   null | string;
-      time:       null | string;
-      time24:     null | string;
-      time12:     null | string;
-      date:       Date | null;
-      day:        null | string;
-      month:      null | string;
-      year:       null | string;
-      unix:       null | string;
-      dst:        boolean | null;
-      dstStart:   Date | null;
-      dstEnd:     Date | null;
-      dstName:    null | string;
-      stateANSI?: null | string;
+      city:        null | string;
+      cityASCII:   null | string;
+      country:     null | string;
+      iso2:        null | string;
+      iso3:        null | string;
+      province:    null | string;
+      timezone:    null | string;
+      time:        null | string;
+      time24:      null | string;
+      time12:      null | string;
+      date:        Date | null;
+      day:         null | string;
+      month:       null | string;
+      year:        null | string;
+      unix:        null | string;
+      dst:         boolean | null;
+      dstStart:    Date | null;
+      dstEnd:      Date | null;
+      dstName:     null | string;
+      utcOffset:   null | string;
+      datetime:    Date | null;
+      utcDatetime: Date | null;
+      dayOfYear:   number | null;
+      weekNumber:  number | null;
+      stateANSI?:  null | string;
   }
 
   export default class worldtimeWrapper {
